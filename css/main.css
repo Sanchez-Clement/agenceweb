@@ -81,6 +81,8 @@ top : 150px;
 .menuphone a:hover {
   color: #7ee07d;
 }
+/*******************************************fin du header***************************************/
+/*******************************************Début du main.accueil********************************/
 
 .fixe {
   display: none;
@@ -90,17 +92,87 @@ h2 {
   font-family: 'Pacifico', cursive;
   text-align: center;
   padding-top: 20px;
+  width: 100%;
 
 }
 
 .accueil {
   background-color: #F5F5F6;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  text-align: center;
+
 
 
   /*border-right: 400px solid transparent;
   border-bottom: 57px solid #ffa495;*/
 
 }
+
+.accueil section {
+  width: 360px;
+  height: 360px;
+  margin-bottom: 30px;
+
+}
+
+.accueil ul, .accueil section,h3 {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+}
+
+
+
+.accueil ul {
+  height: 200px;
+}
+
+h3, .accueil ul {
+  font-size: 25px;
+  display: none;
+  font-family: 'Patrick Hand', cursive;
+}
+
+h3 {
+
+  height: 160px;
+}
+
+.immo  {
+
+  background-image: url(../img/references/immo.png);
+}
+
+.boulanger {
+  background-image: url(../img/references/patisserie.png);
+}
+
+.architecte {
+  background-image: url(../img/references/architecte.png);
+}
+
+.paysagiste {
+  background-image: url(../img/references/paysagiste.png);
+}
+
+.bijouterie {
+  background-image: url(../img/references/bijouterie.png);
+}
+
+.traiteur {
+  background-image: url(../img/references/traiteur.png);
+}
+
+.accueil section:hover h3, .accueil section:hover ul {
+  background-color: rgba(255, 164, 149, 0.8);
+  display :flex;
+
+
+}
+
+/*************************************main class équipe**************************/
 
 
 .équipe {
