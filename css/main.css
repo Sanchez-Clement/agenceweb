@@ -279,3 +279,305 @@ hr, .équipe h3, .équipe p {
   }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*################################## nor ####################################*/
+header {
+  z-index: 20;
+}
+
+/*<======================== .produit ================================>*/
+.produit {
+   background-color: #F5F5F6;
+   display: flex;
+   flex-flow: column nowrap;
+   justify-content: space-around;
+   align-items: center;
+   width: 100%;
+   height: auto;
+}
+/*<+++++++++++++++++++++ .produit figure +++++++++++++++++++++++++++>*/
+.produit figure {
+ width: 98%;
+ height: 500px;
+}
+
+/*<........................... .produit figure img .....................>*/
+.produit figure img {
+  width: 80%;
+  height: auto;
+  position: relative;
+  top: 30px;
+}
+
+/*<...................... .produit .package ..................>*/
+.produit .package {
+  background-color: #ffa495;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 377px;
+}
+/*<--------------- .produit .package figcaption ,span ------------>*/
+.produit .package figcaption ,span{
+  text-align: center;
+}
+/*<........................ .produit .package h3 ..................>*/
+.produit .package h3 {
+   position: relative;
+   top: 10px;
+}
+
+/*<......................... .produit .package figca span ....................>*/
+
+.produit .package figcaption span {
+   font-weight: bold;
+   color: #b3443c;
+   /*margin-top: 20px;*/
+   /*padding-top: 20px;*/
+   font-size: 30px;
+}
+/*<----------------  .produit .package a ------------------------>*/
+
+.produit .package a {
+  background-color: #7ee07d;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
+            -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
+
+}
+
+
+/*<============================ main class contact ==========================>*/
+
+.contact {
+   width: 100%;
+   height: auto;
+   background-color: #b1ffad;
+   display: flex;
+   flex-flow: column nowrap;
+   justify-content: space-around;
+   align-items: center;
+}
+/*<+++++++++++++++++++++++ section main class cotact +++++++++++++++++++++++++++>*/
+
+.contact section {
+   width: 90%;
+   height: auto;
+   background-color: #b1ffad;
+}
+
+/*<....................... form main class contact ......................>*/
+
+.cntact form {
+   width: 90%;
+   height: auto;
+   background-color: #b1ffad;
+}
