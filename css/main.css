@@ -40,9 +40,9 @@ nav label {
   width: 50px;
   background-color: #7ee07d;
   border-radius: 50px;
-  position: relative;
-  bottom: 16px;
-  left: 286px;
+  position: absolute;
+  top: 75px;
+  right: 20px;
   font-size: 30px;
 
 }
@@ -55,12 +55,13 @@ nav label i {
 
 .menuphone {
 
-  width: 0;
+  width: 250px;
+  height: 0;
   overflow: hidden;}
 
 #menu:checked ~ .menuphone {
 
-  width: 250px;
+
   height: 400px;
   display: flex;
   flex-flow: column nowrap;
@@ -70,14 +71,72 @@ nav label i {
   font-family: 'Pacifico', cursive;
   font-size: 25px;
   border: 3px solid #ea7367;
-  position: relative;
-  left : 100px;
+  position: absolute;
+  right: 0;
+
+top : 150px;
+  transition: 1s;
 }
 
 .menuphone a:hover {
   color: #7ee07d;
 }
 
+.fixe {
+  display: none;
+}
+
+h2 {
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+  padding-top: 20px;
+
+}
+
 .accueil {
   background-color: #F5F5F6;
+
+
+  /*border-right: 400px solid transparent;
+  border-bottom: 57px solid #ffa495;*/
+
+}
+
+
+.équipe {
+  background-color: #ffa495;
+
+  /*border-bottom: 55px solid #ffa495;
+  border-left: 370px solid transparent;*/
+
+}
+
+/*.produit {
+  border-top: 57px solid #ffa495;
+  border-right: 400px solid transparent
+
+}*/
+
+@media (min-width : 600px) {
+
+  .fixe {
+    display: block;
+    position: sticky;
+    top : 0;
+  }
+
+  .fixe ul {
+    display: flex;
+    flex-flow: row nowrap;
+
+  }
+
+  header {
+    position: relative;
+  }
+
+  .menuphone, nav label{
+    display: none;
+  }
+
 }
