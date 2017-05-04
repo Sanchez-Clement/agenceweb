@@ -92,6 +92,7 @@ h2 {
   font-family: 'Pacifico', cursive;
   text-align: center;
   padding-top: 20px;
+  margin-bottom: 20px;
   width: 100%;
 
 }
@@ -177,10 +178,76 @@ h3 {
 
 .équipe {
   background-color: #ffa495;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 
   /*border-bottom: 55px solid #ffa495;
   border-left: 370px solid transparent;*/
 
+}
+
+.clement:hover h3, .nor:hover h3 {
+  visibility: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  border-top-left-radius: 125px;
+  border-top-right-radius: 125px;
+  background-color: rgba(177, 255, 173, 0.8);
+
+  /*width: 100%
+  margin: auto;*/
+}
+
+.clement:hover p, .nor:hover p {
+  visibility: visible;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 125px;
+  border-bottom-right-radius: 125px;
+  background-color: rgba(177, 255, 173, 0.8);
+  /*width: 100%
+  margin: auto;*/
+}
+hr, .équipe h3, .équipe p {
+  visibility: hidden;
+}
+
+.clement:hover hr, .nor:hover hr {
+  visibility: visible;
+  border: 1px solid black;
+  width: 248px;
+
+
+}
+
+.clement, .nor {
+
+  width: 250px;
+  height: 250px;
+  border-radius: 125px;
+  /*background-color: green;*/
+  margin: 50px 0;
+  /*background-image: url();*/
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+
+
+}
+
+.clement {
+  background-image: url(../img/photos/clement.jpg);
+  background-size: cover;
+}
+
+.nor {
+  background-image: url(../img/photos/nor.jpg);
+  background-size: cover;
 }
 
 /*.produit {
