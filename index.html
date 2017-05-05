@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title></title>
+    <title>NOR-CLEMENT</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -30,9 +30,9 @@
             <label for="menu"><i class="fa fa-bars" aria-hidden="true"></i></label>
             <ul class="menuphone">
                 <li><a href="#">Accueil</a></li>
-                <li><a href="#">Équipe</a></li>
-                <li><a href="#">Produits</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#team">Équipe</a></li>
+                <li><a href="#products">Produits</a></li>
+                <li><a href="#contactus">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -107,7 +107,7 @@
 
     </main>
     <!-- <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ main class equipe ~~~~~~~~~~~~~~~~~~~~~~~~~~~> -->
-    <main class="équipe">
+    <main class="équipe" id="team">
         <h2>ÉQUIPE</h2>
         <!-- <................................. 1st section class equipe ...................> -->
         <section class="clement">
@@ -123,7 +123,7 @@
         </section>
     </main>
     <!-- <~~~~~~~~~~~~~~~~~~~~~~~~~~ main class produit ~~~~~~~~~~~~~~~~~~~~~~~> -->
-    <main class="produit">
+    <main class="produit" id="products">
         <h2>PRODUITS</h2>
         <!-- <................... 1st figure class produit.......................> -->
         <figure>
@@ -147,7 +147,7 @@
         <!-- <........................ 3rd figure class produit ....................> -->
         <figure>
           <img src="img/packages/site-pro.png" alt="logo professionel">
-        <div class="package">            
+        <div class="package">
             <h3>SITE WEB PROFESSIONEL</h3>
             <figcaption>
                 Plus qu’un site vitrine, le site professionnel vous permet d’avoir une interaction avec les internautes. Nous vous proposons une ergonomie simple d’utilisation avec un design à votre image et un référencement sur les moteurs de recherche. <br>
@@ -158,21 +158,17 @@
         </figure>
     </main>
     <!-- <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ main class contact ~~~~~~~~~~~~~~~~~> -->
-    <main class="contact">
+    <main class="contact" id="contactus">
         <h2>CONTACT</h2>
         <!-- <......................... 1st section class contact...............> -->
         <section>
             <h3>Coordonées:</h3>
-            <p>94 Rue léon marlot <br>59100 Roubaix</p>
-            <p>03-26-90-72-32</p>
-            <p><a href="mailto:nor-clément@gmail.com?subject=feedback">nor-clément@gmail.com</a></p>
+            <p><i class="fa fa-home" aria-hidden="true"></i>94 Rue léon marlot <br>59100 Roubaix</p>
+            <p><i class="fa fa-phone" aria-hidden="true"></i>03-26-90-72-32</p>
+            <p><i class="fa fa-at" aria-hidden="true"></i><a href="mailto:nor-clément@gmail.com?subject=feedback">nor-clément@gmail.com</a></p>
         </section>
         <!-- <................... form class contact...................> -->
         <form class="formulaire" action="index.html" method="post">
-            <label for="type">Femme</label>
-            <input type="radio" name="Femme">
-            <label for="type">Homme</label>
-            <input type="radio" name="Homme">
             <label for="">NOM</label>
             <input type="text" name="NOME" placeholder="Nom">
             <label for="Prénom">PRÉNOM</label>
@@ -182,8 +178,8 @@
             <label for="email">EMAIL</label>
             <input type="text" name="email" placeholder="email">
             <label for="projet">PROJET</label>
-            <input type="text" name="projet" placeholder="projet">
-            <input type="submit" name="submit" value="envoyer">
+            <input class="projet" type="text" name="projet" placeholder="projet">
+            <input class="envoi" type="submit" name="submit" value="envoyer">
 
         </form>
         <!-- <...................... iframe map .............................> -->
@@ -195,9 +191,9 @@
     <footer>
         <!-- <............................ lien footer .........................> -->
         <ul>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
         </ul>
     </footer>
 
