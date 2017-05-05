@@ -255,19 +255,36 @@ hr, .équipe h3, .équipe p {
   border-right: 400px solid transparent
 
 }*/
-
+/*****************************************************************tablette*************************************/
 @media (min-width : 600px) {
+
+  h1 {
+    text-align: center;
+
+  }
 
   .fixe {
     display: block;
     position: sticky;
     top : 0;
+    background-color: #EA7367;
+    height: 50px;
+
   }
 
   .fixe ul {
     display: flex;
     flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
 
+  }
+
+  .fixe ul a:hover {
+    color: #7EE07D;
   }
 
   header {
