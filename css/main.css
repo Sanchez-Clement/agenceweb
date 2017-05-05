@@ -127,18 +127,18 @@ h2 {
 
 
 .accueil ul {
-  height: 200px;
+  height: 70%;
 }
 
-h3, .accueil ul {
+.accueil h3, .accueil ul {
   font-size: 25px;
   display: none;
   font-family: 'Patrick Hand', cursive;
 }
 
-h3 {
+.accueil h3 {
 
-  height: 160px;
+  height: 30%;
 }
 
 .immo  {
@@ -495,7 +495,7 @@ header {
 .produit {
    background-color: #F5F5F6;
    display: flex;
-   flex-flow: column nowrap;
+   flex-flow: row wrap;
    justify-content: space-around;
    align-items: center;
    width: 100%;
@@ -503,7 +503,7 @@ header {
 }
 /*<+++++++++++++++++++++ .produit figure +++++++++++++++++++++++++++>*/
 .produit figure {
- width: 98%;
+ width: 320px;
  height: 500px;
 }
 
@@ -523,6 +523,7 @@ header {
   justify-content: space-around;
   align-items: center;
   height: 377px;
+  border-radius: 10px;
 }
 /*<--------------- .produit .package figcaption ,span ------------>*/
 .produit .package figcaption ,span{
@@ -531,7 +532,11 @@ header {
 /*<........................ .produit .package h3 ..................>*/
 .produit .package h3 {
    position: relative;
-   top: 10px;
+   top: 20px;
+}
+
+.produit .package figcaption {
+  padding: 10px;
 }
 
 /*<......................... .produit .package figca span ....................>*/
@@ -539,9 +544,11 @@ header {
 .produit .package figcaption span {
    font-weight: bold;
    color: #b3443c;
-   /*margin-top: 20px;*/
+   margin-top: 20px;
    /*padding-top: 20px;*/
    font-size: 30px;
+   position: relative;
+   top: 20px;
 }
 /*<----------------  .produit .package a ------------------------>*/
 
@@ -554,6 +561,10 @@ header {
 
 }
 
+h3, figcaption, .contact form {
+   font-family: 'Patrick Hand',cursive;
+}
+
 
 /*<============================ main class contact ==========================>*/
 
@@ -563,21 +574,116 @@ header {
    background-color: #b1ffad;
    display: flex;
    flex-flow: column nowrap;
-   justify-content: space-around;
+   justify-content: center;
    align-items: center;
+}
+
+.contact h2 {
+  margin: 25px;
 }
 /*<+++++++++++++++++++++++ section main class cotact +++++++++++++++++++++++++++>*/
 
 .contact section {
-   width: 90%;
+   width: 300px;
    height: auto;
-   background-color: #b1ffad;
+   background-color: #FFA495;
+   text-align: center;
+   border-radius: 15px;
+   margin-bottom: 20px;
+}
+
+
+.contact section p {
+   margin: 10px;
+}
+
+.contact section i {
+  margin-right: 5px;
+  color: white;
 }
 
 /*<....................... form main class contact ......................>*/
 
-.cntact form {
-   width: 90%;
+.contact form {
+   width: 300px;
    height: auto;
    background-color: #b1ffad;
+   display: flex;
+   flex-flow: column nowrap;
+   justify-content: center;
+}
+
+
+.contact input ,.contact label {
+   width: 100%;
+
+}
+
+.contact input {
+  margin-bottom: 10px;
+}
+
+
+.contact .projet {
+  height: 90px;
+}
+
+.contact .envoi {
+   width: 50%;
+   margin: 10px auto 30px auto;
+   /*box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),*/
+             /*-1px 2px 20px rgba(255, 255, 255, 0.6) inset;*/
+   background-color: #EA7367;
+   border-radius: 5px;
+   padding: 5px;
+   font-family: 'Pacifico', cursive;
+   font-size: 20px;
+
+}
+
+
+
+.contact iframe {
+   width: 90%;
+
+}
+
+
+
+
+/*<============================= footer =============================>*/
+
+footer {
+   width: 100%;
+   height: 50px;
+   background-color: #b3444c;
+   position: sticky;
+   bottom: 0;
+
+}
+
+footer ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer li {
+   background-color: #7EE07D;
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   font-size: 20px;
+
+}
+
+
+footer li i {
+   position: relative;
+   top: 3px;
+   left: 7px;
+
 }
