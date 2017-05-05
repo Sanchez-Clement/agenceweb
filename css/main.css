@@ -319,6 +319,38 @@ hr, .équipe h3, .équipe p {
 
 }
 
+@media (min-width : 1000px) {
+
+  .accueil section {
+    width: 350px;
+    height: 350px;
+  }
+
+  #products figure {
+
+    margin-bottom: 100px;}
+
+
+#contactus {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  height: 900px;
+  position: relative;
+
+}
+
+#carte {
+  width: 40%;
+  height: 612px;
+}
+
+#contactus h2 {
+  position: absolute;
+  top : 20px;
+}
+}
+
 
 
 
