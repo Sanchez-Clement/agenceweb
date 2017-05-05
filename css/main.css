@@ -127,7 +127,7 @@ h2 {
 
 
 .accueil ul {
-  height: 200px;
+  height: 70%;
 }
 
 .accueil h3, .accueil ul {
@@ -138,7 +138,7 @@ h2 {
 
 .accueil h3 {
 
-  height: 160px;
+  height: 30%;
 }
 
 .immo  {
@@ -532,7 +532,11 @@ header {
 /*<........................ .produit .package h3 ..................>*/
 .produit .package h3 {
    position: relative;
-   top: 10px;
+   top: 20px;
+}
+
+.produit .package figcaption {
+  padding: 10px;
 }
 
 /*<......................... .produit .package figca span ....................>*/
@@ -540,9 +544,11 @@ header {
 .produit .package figcaption span {
    font-weight: bold;
    color: #b3443c;
-   /*margin-top: 20px;*/
+   margin-top: 20px;
    /*padding-top: 20px;*/
    font-size: 30px;
+   position: relative;
+   top: 20px;
 }
 /*<----------------  .produit .package a ------------------------>*/
 
@@ -570,6 +576,10 @@ h3, figcaption, .contact form {
    flex-flow: column nowrap;
    justify-content: center;
    align-items: center;
+}
+
+.contact h2 {
+  margin: 25px;
 }
 /*<+++++++++++++++++++++++ section main class cotact +++++++++++++++++++++++++++>*/
 
