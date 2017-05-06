@@ -29,6 +29,9 @@ h1 {
   padding: 20px;
 
 }
+h1 span {
+  display: none;
+}
 
 #menu {
   display: none;
@@ -245,7 +248,7 @@ hr, .équipe h3, .équipe p {
 }
 
 .clement {
-  background-image: url(../img/photos/clement.jpg);
+  background-image: url(../img/photos/clement2.jpg);
   background-size: cover;
 }
 
@@ -265,7 +268,19 @@ hr, .équipe h3, .équipe p {
   h1 {
     text-align: center;
 
+
   }
+
+  h1 span {
+    display: block;
+  }
+
+  header {
+    height: auto;
+  }
+
+
+
 
   .fixe {
     display: block;
@@ -320,6 +335,17 @@ hr, .équipe h3, .équipe p {
 }
 
 @media (min-width : 1000px) {
+
+  header {
+    height: 600px;
+    display: flex;
+
+  }
+
+  h1 {
+    font-size: 85px;
+    margin: auto;
+  }
 
   .accueil section {
     width: 350px;
