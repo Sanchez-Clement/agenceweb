@@ -437,6 +437,26 @@ h3, figcaption, .contact form {
 
 }
 
+.bordure {
+  height: 100px;
+  width: 100%;
+  background-image: url(../img/bord1.png);
+  background-size: cover;
+}
+.bordure2 {
+  height: 100px;
+  width: 100%;
+  background-image: url(../img/bord2.png);
+  background-size: cover;
+}
+
+.bordure3 {
+  height: 100px;
+  width: 100%;
+  background-image: url(../img/bord3.png);
+  background-size: cover;
+}
+
 
 
 
@@ -540,6 +560,15 @@ footer li i {
   }
 
 
+.bordure, .bordure2 {
+    height: 203px;
+  }
+
+.bordure3 {
+  height: 157px;
+}
+
+
 
 }
 
@@ -592,7 +621,12 @@ header, #contactus {
 
 #contactus h2 {
   position: absolute;
-  top : 20px;
+  top : 0;
+t
+}
+
+.bordure3 {
+  height: 203px;
 }
 
 
