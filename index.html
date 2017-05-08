@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" href="favicon.png">
     <!-- Place favicon.ico in the root directory -->
 
     <link rel="stylesheet" href="css/normalize.css">
@@ -23,7 +23,7 @@
 <body>
     <!-- <~~~~~~~~~~~~~~~~~~~~~~~ header ~~~~~~~~~~~~~~~~~~~~~~~~~~~> -->
     <header>
-        <h1>Nor&Clément</h1>
+        <h1>Nor&Clément <span><br>Web Agency</span></h1>
         <!-- <........................... nav .......................> -->
         <nav>
             <input type="checkbox" id="menu">
@@ -38,15 +38,15 @@
     </header>
     <nav class="fixe">
       <ul>
-          <li><a href="#">Accueil</a></li>
-          <li><a href="#">Équipe</a></li>
-          <li><a href="#">Produits</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#home">Accueil</a></li>
+          <li><a href="#team">Équipe</a></li>
+          <li><a href="#products">Produits</a></li>
+          <li><a href="#contactus">Contact</a></li>
       </ul>
     </nav>
 
     <!-- <~~~~~~~~~~~~~~~~~~~~~~~~~~ main class accuiel ~~~~~~~~~~~~~~~~~> -->
-    <main class="accueil">
+    <main id="home" class="accueil" >
         <h2>Accueil</h2>
         <!-- <.................... accueil 1st section ...................> -->
         <section class="immo">
@@ -105,7 +105,12 @@
             </ul>
         </section>
 
+        <div class="bordure">
+
+        </div>
+
     </main>
+
     <!-- <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ main class equipe ~~~~~~~~~~~~~~~~~~~~~~~~~~~> -->
     <main class="équipe" id="team">
         <h2>ÉQUIPE</h2>
@@ -121,9 +126,13 @@
             <hr>
             <p>CHEF DE PROJET</p>
         </section>
+
     </main>
     <!-- <~~~~~~~~~~~~~~~~~~~~~~~~~~ main class produit ~~~~~~~~~~~~~~~~~~~~~~~> -->
     <main class="produit" id="products">
+      <div class="bordure2">
+
+      </div>
         <h2>PRODUITS</h2>
         <!-- <................... 1st figure class produit.......................> -->
         <figure>
@@ -156,11 +165,17 @@
             <a href="#">EN SAVOIR +</a>
           </div>
         </figure>
+        <div class="bordure3">
+
+        </div>
     </main>
     <!-- <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ main class contact ~~~~~~~~~~~~~~~~~> -->
     <main class="contact" id="contactus">
         <h2>CONTACT</h2>
         <!-- <......................... 1st section class contact...............> -->
+        <div class="pc">
+
+
         <section>
             <h3>Coordonées:</h3>
             <p><i class="fa fa-home" aria-hidden="true"></i>94 Rue léon marlot <br>59100 Roubaix</p>
@@ -169,21 +184,22 @@
         </section>
         <!-- <................... form class contact...................> -->
         <form class="formulaire" action="index.html" method="post">
-            <label for="">NOM</label>
+            <label>NOM</label>
             <input type="text" name="NOME" placeholder="Nom">
-            <label for="Prénom">PRÉNOM</label>
+            <label>PRÉNOM</label>
             <input type="text" name="Prénom" placeholder="prénom">
-            <label for="company">ENTREPRISE</label>
+            <label>ENTREPRISE</label>
             <input type="text" name="company" placeholder="entreprise">
-            <label for="email">EMAIL</label>
+            <label>EMAIL</label>
             <input type="text" name="email" placeholder="email">
-            <label for="projet">PROJET</label>
+            <label>PROJET</label>
             <input class="projet" type="text" name="projet" placeholder="projet">
             <input class="envoi" type="submit" name="submit" value="envoyer">
 
         </form>
+        </div>
         <!-- <...................... iframe map .............................> -->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2528.4761484101664!2d3.189543515739506!3d50.67398617950678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3287c59c98277%3A0xb94f7f54b271bd84!2s94+Rue+L%C3%A9on+Marlot%2C+59100+Roubaix!5e0!3m2!1sfr!2sfr!4v1493817258505"
+        <iframe id="carte" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2528.4761484101664!2d3.189543515739506!3d50.67398617950678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3287c59c98277%3A0xb94f7f54b271bd84!2s94+Rue+L%C3%A9on+Marlot%2C+59100+Roubaix!5e0!3m2!1sfr!2sfr!4v1493817258505"
             width="600" height="450" style="border:0" allowfullscreen></iframe>
 
     </main>

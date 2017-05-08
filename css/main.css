@@ -12,43 +12,122 @@ a {
   color: black;
 }
 
-header {
-  background-color: #ea7367;
-  position: sticky;
-  top: 0;
-  height: 100px;
+/*********************************propriétés répétées********************************/
 
+header, footer {
+  position: sticky;
 }
 
+h1, nav label, .produit .package figcaption span {
+  font-size: 30px;
+}
+
+h1 span, #menu, .fixe, .accueil h3,.accueil ul {
+  display: none;
+}
+
+h1, #menu:checked ~ .menuphone, h2, .contact .envoi {
+  font-family: 'Pacifico', cursive;
+}
+
+nav label,.produit .package a,footer li  {
+  background-color: #7ee07d;
+}
+
+nav label i, .produit figure img, .produit .package h3, .produit .package figcaption span, footer li i  {
+  position: relative;
+}
+
+#menu:checked ~ .menuphone,
+.accueil,
+.accueil section:hover ul, .accueil section,h3,
+.équipe,
+.clement:hover h3, .nor:hover h3,
+.clement:hover p, .nor:hover p,
+.clement, .nor,
+.produit,.produit .package,
+.contact , .contact form,
+footer ul ,
+.accueil section:hover h3, .accueil section:hover ul {
+  display: flex;
+}
+
+#menu:checked ~ .menuphone,
+.accueil section:hover ul, .accueil section,h3,
+.produit .package,
+.contact, .contact form
+
+ {
+
+  flex-flow: column nowrap;
+}
+
+#menu:checked ~ .menuphone,
+.accueil,
+.accueil section:hover ul, .accueil section,h3,
+.équipe, .produit,
+.produit .package,
+footer ul
+{
+  justify-content: space-around;
+}
+
+.clement, .nor,
+.clement:hover h3, .nor:hover h3,.clement:hover p, .nor:hover p,
+.contact, .contact form {
+  justify-content: center;
+}
+
+#menu:checked ~ .menuphone,
+.clement:hover h3, .nor:hover h3,.clement:hover p, .nor:hover p,
+.produit, .produit .package,
+.contact, footer ul
+ {
+  align-items: center;
+}
+
+.accueil, h2,
+.produit .package figcaption ,span ,
+.contact section
+  {
+  text-align: center;
+}
+
+h2, .produit, .contact, .contact input ,.contact label, footer, footer ul {
+  width: 100%;
+}
+
+
+/**********************************************Début du header**********************************************/
+
+header {
+  background-color: #ea7367;
+  top: 0;
+  height: 100px;
+  z-index: 20;
+}
 
 
 h1 {
   margin: 0;
-  font-size: 30px;
-  font-family: 'Pacifico', cursive;
   padding: 20px;
-
 }
 
-#menu {
-  display: none;
-}
+/******************************* debut menu hamburger***********************************/
+
 
 nav label {
   display: block;
   height: 50px;
   width: 50px;
-  background-color: #7ee07d;
   border-radius: 50px;
   position: absolute;
   top: 75px;
   right: 20px;
-  font-size: 30px;
 
 }
 
 nav label i {
-  position: relative;
   left: 11px;
   top: 5px;
 }
@@ -57,24 +136,18 @@ nav label i {
 
   width: 250px;
   height: 0;
-  overflow: hidden;}
+  overflow: hidden;
+}
 
 #menu:checked ~ .menuphone {
 
-
   height: 400px;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-around;
   background-color: white;
-  align-items: center;
-  font-family: 'Pacifico', cursive;
   font-size: 25px;
   border: 3px solid #ea7367;
   position: absolute;
   right: 0;
-
-top : 150px;
+  top : 150px;
   transition: 1s;
 }
 
@@ -84,32 +157,23 @@ top : 150px;
 /*******************************************fin du header***************************************/
 /*******************************************Début du main.accueil********************************/
 
-.fixe {
-  display: none;
-}
+
 
 h2 {
-  font-family: 'Pacifico', cursive;
-  text-align: center;
   padding-top: 20px;
   margin-bottom: 20px;
-  width: 100%;
 
 }
 
 .accueil {
   background-color: #F5F5F6;
-  display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
-  text-align: center;
-
-
-
   /*border-right: 400px solid transparent;
   border-bottom: 57px solid #ffa495;*/
 
 }
+
+ /*****************************début références************************************/
 
 .accueil section {
   width: 360px;
@@ -118,27 +182,31 @@ h2 {
 
 }
 
-.accueil ul, .accueil section,h3 {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-around;
-}
 
 
-
-.accueil ul {
-  height: 70%;
-}
 
 .accueil h3, .accueil ul {
   font-size: 25px;
-  display: none;
   font-family: 'Patrick Hand', cursive;
+}
+
+.accueil section:hover h3, .accueil section:hover ul {
+  background-color: rgba(255, 164, 149, 0.8);
+
 }
 
 .accueil h3 {
 
   height: 30%;
+}
+
+.accueil ul {
+  height: 70%;
+}
+
+
+.immo, .boulanger, .architecte, .paysagiste, .bijouterie, .traiteur {
+  background-size: cover;
 }
 
 .immo  {
@@ -166,53 +234,44 @@ h2 {
   background-image: url(../img/references/traiteur.png);
 }
 
-.accueil section:hover h3, .accueil section:hover ul {
-  background-color: rgba(255, 164, 149, 0.8);
-  display :flex;
 
-
-}
 
 /*************************************main class équipe**************************/
 
 
 .équipe {
   background-color: #ffa495;
-  display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
 
   /*border-bottom: 55px solid #ffa495;
   border-left: 370px solid transparent;*/
+}
+
+.clement:hover h3, .nor:hover h3,.clement:hover p, .nor:hover p {
+  visibility: visible;
+  height: 50%;
+  background-color: rgba(177, 255, 173, 0.8);
 
 }
 
 .clement:hover h3, .nor:hover h3 {
-  visibility: visible;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50%;
+
   border-top-left-radius: 125px;
   border-top-right-radius: 125px;
-  background-color: rgba(177, 255, 173, 0.8);
 
   /*width: 100%
   margin: auto;*/
 }
 
 .clement:hover p, .nor:hover p {
-  visibility: visible;
-  height: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
   border-bottom-left-radius: 125px;
   border-bottom-right-radius: 125px;
-  background-color: rgba(177, 255, 173, 0.8);
+
   /*width: 100%
   margin: auto;*/
 }
+
 hr, .équipe h3, .équipe p {
   visibility: hidden;
 }
@@ -222,7 +281,6 @@ hr, .équipe h3, .équipe p {
   border: 1px solid black;
   width: 248px;
 
-
 }
 
 .clement, .nor {
@@ -230,18 +288,13 @@ hr, .équipe h3, .équipe p {
   width: 250px;
   height: 250px;
   border-radius: 125px;
-  /*background-color: green;*/
   margin: 50px 0;
-  /*background-image: url();*/
-  display: flex;
   flex-flow: column;
-  justify-content: center;
-
 
 }
 
 .clement {
-  background-image: url(../img/photos/clement.jpg);
+  background-image: url(../img/photos/clement2.jpg);
   background-size: cover;
 }
 
@@ -256,249 +309,14 @@ hr, .équipe h3, .équipe p {
 
 }*/
 
-@media (min-width : 600px) {
 
-  .fixe {
-    display: block;
-    position: sticky;
-    top : 0;
-  }
 
-  .fixe ul {
-    display: flex;
-    flex-flow: row nowrap;
 
-  }
+/*<============================================== main produit======== ================================>*/
 
-  header {
-    position: relative;
-  }
-
-  .menuphone, nav label{
-    display: none;
-  }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*################################## nor ####################################*/
-header {
-  z-index: 20;
-}
-
-/*<======================== .produit ================================>*/
 .produit {
    background-color: #F5F5F6;
-   display: flex;
    flex-flow: row wrap;
-   justify-content: space-around;
-   align-items: center;
-   width: 100%;
    height: auto;
 }
 /*<+++++++++++++++++++++ .produit figure +++++++++++++++++++++++++++>*/
@@ -511,27 +329,19 @@ header {
 .produit figure img {
   width: 80%;
   height: auto;
-  position: relative;
   top: 30px;
 }
 
 /*<...................... .produit .package ..................>*/
 .produit .package {
   background-color: #ffa495;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-around;
-  align-items: center;
   height: 377px;
   border-radius: 10px;
 }
-/*<--------------- .produit .package figcaption ,span ------------>*/
-.produit .package figcaption ,span{
-  text-align: center;
-}
+
 /*<........................ .produit .package h3 ..................>*/
 .produit .package h3 {
-   position: relative;
+
    top: 20px;
 }
 
@@ -545,15 +355,11 @@ header {
    font-weight: bold;
    color: #b3443c;
    margin-top: 20px;
-   /*padding-top: 20px;*/
-   font-size: 30px;
-   position: relative;
    top: 20px;
 }
 /*<----------------  .produit .package a ------------------------>*/
 
 .produit .package a {
-  background-color: #7ee07d;
   padding: 10px;
   border-radius: 10px;
   box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
@@ -569,13 +375,8 @@ h3, figcaption, .contact form {
 /*<============================ main class contact ==========================>*/
 
 .contact {
-   width: 100%;
    height: auto;
    background-color: #b1ffad;
-   display: flex;
-   flex-flow: column nowrap;
-   justify-content: center;
-   align-items: center;
 }
 
 .contact h2 {
@@ -587,7 +388,6 @@ h3, figcaption, .contact form {
    width: 300px;
    height: auto;
    background-color: #FFA495;
-   text-align: center;
    border-radius: 15px;
    margin-bottom: 20px;
 }
@@ -608,16 +408,8 @@ h3, figcaption, .contact form {
    width: 300px;
    height: auto;
    background-color: #b1ffad;
-   display: flex;
-   flex-flow: column nowrap;
-   justify-content: center;
 }
 
-
-.contact input ,.contact label {
-   width: 100%;
-
-}
 
 .contact input {
   margin-bottom: 10px;
@@ -631,12 +423,9 @@ h3, figcaption, .contact form {
 .contact .envoi {
    width: 50%;
    margin: 10px auto 30px auto;
-   /*box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),*/
-             /*-1px 2px 20px rgba(255, 255, 255, 0.6) inset;*/
    background-color: #EA7367;
    border-radius: 5px;
    padding: 5px;
-   font-family: 'Pacifico', cursive;
    font-size: 20px;
 
 }
@@ -648,31 +437,45 @@ h3, figcaption, .contact form {
 
 }
 
+.bordure {
+  height: 100px;
+  width: 100%;
+  background-image: url(../img/bord1.png);
+  background-size: cover;
+}
+.bordure2 {
+  height: 100px;
+  width: 100%;
+  background-image: url(../img/bord2.png);
+  background-size: cover;
+}
+
+.bordure3 {
+  height: 100px;
+  width: 100%;
+  background-image: url(../img/bord3.png);
+  background-size: cover;
+}
+
 
 
 
 /*<============================= footer =============================>*/
 
 footer {
-   width: 100%;
    height: 50px;
    background-color: #b3444c;
-   position: sticky;
+
    bottom: 0;
 
 }
 
 footer ul {
-  width: 100%;
   height: 100%;
-  display: flex;
   flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: center;
 }
 
 footer li {
-   background-color: #7EE07D;
    width: 30px;
    height: 30px;
    border-radius: 50%;
@@ -682,8 +485,149 @@ footer li {
 
 
 footer li i {
-   position: relative;
+
    top: 3px;
    left: 7px;
+
+}
+
+
+/*****************************************************************tablette*************************************/
+@media (min-width : 600px) {
+
+  h1 {
+    text-align: center;
+
+
+  }
+
+  h1 span, .fixe {
+    display: block;
+  }
+
+  header {
+    height: auto;
+  }
+
+
+
+
+  .fixe {
+    position: sticky;
+    top : 0;
+    background-color: #EA7367;
+    height: 50px;
+    z-index: 20;
+
+  }
+
+  .fixe ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
+
+  }
+
+  .fixe ul a:hover {
+    color: #7EE07D;
+  }
+
+  header {
+    position: relative;
+  }
+
+  .menuphone, nav label{
+    display: none;
+  }
+
+  .accueil, .produit {
+    background-image: url(../img/background/bois.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .accueil section {
+    width: 300px;
+    height: 300px;
+  }
+
+  #products figure {
+    width: 300px;
+  }
+
+
+.bordure, .bordure2 {
+    height: 203px;
+  }
+
+.bordure3 {
+  height: 157px;
+}
+
+
+
+}
+
+@media (min-width : 1000px) {
+
+header, #contactus {
+  display: flex;
+}
+
+.fixe {
+  height: 70px;
+}
+
+.fixe ul {
+  font-size: 30px;
+}
+
+  header {
+    height: 570px;
+
+  }
+
+  h1 {
+    font-size: 85px;
+    margin: auto;
+  }
+
+  .accueil section {
+    width: 350px;
+    height: 350px;
+  }
+
+  #products figure {
+
+    margin-bottom: 100px;}
+
+
+#contactus {
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  height: 900px;
+  position: relative;
+
+}
+
+#carte {
+  width: 40%;
+  height: 612px;
+}
+
+#contactus h2 {
+  position: absolute;
+  top : 0;
+t
+}
+
+.bordure3 {
+  height: 203px;
+}
+
 
 }
