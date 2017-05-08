@@ -1,282 +1,633 @@
-/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
-
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
-html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
+li {
+  list-style: none;
 }
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * These selection rule sets have to be separate.
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
+a {
+  text-decoration: none;
+  color: black;
 }
 
-/*
- * A better looking default horizontal rule
- */
+/*********************************propriétés répétées********************************/
 
-hr {
+header, footer {
+  position: sticky;
+}
+
+h1, nav label, .produit .package figcaption span {
+  font-size: 30px;
+}
+
+h1 span, #menu, .fixe, .accueil h3,.accueil ul {
+  display: none;
+}
+
+h1, #menu:checked ~ .menuphone, h2, .contact .envoi {
+  font-family: 'Pacifico', cursive;
+}
+
+nav label,.produit .package a,footer li  {
+  background-color: #7ee07d;
+}
+
+nav label i, .produit figure img, .produit .package h3, .produit .package figcaption span, footer li i  {
+  position: relative;
+}
+
+#menu:checked ~ .menuphone,
+.accueil,
+.accueil section:hover ul, .accueil section,h3,
+.équipe,
+.clement:hover h3, .nor:hover h3,
+.clement:hover p, .nor:hover p,
+.clement, .nor,
+.produit,.produit .package,
+.contact , .contact form,
+footer ul ,
+.accueil section:hover h3, .accueil section:hover ul {
+  display: flex;
+}
+
+#menu:checked ~ .menuphone,
+.accueil section:hover ul, .accueil section,h3,
+.produit .package,
+.contact, .contact form
+
+ {
+
+  flex-flow: column nowrap;
+}
+
+#menu:checked ~ .menuphone,
+.accueil,
+.accueil section:hover ul, .accueil section,h3,
+.équipe, .produit,
+.produit .package,
+footer ul
+{
+  justify-content: space-around;
+}
+
+.clement, .nor,
+.clement:hover h3, .nor:hover h3,.clement:hover p, .nor:hover p,
+.contact, .contact form {
+  justify-content: center;
+}
+
+#menu:checked ~ .menuphone,
+.clement:hover h3, .nor:hover h3,.clement:hover p, .nor:hover p,
+.produit, .produit .package,
+.contact, footer ul
+ {
+  align-items: center;
+}
+
+.accueil, h2,
+.produit .package figcaption ,span ,
+.contact section
+  {
+  text-align: center;
+}
+
+h2, .produit, .contact, .contact input ,.contact label, footer, footer ul {
+  width: 100%;
+}
+
+
+/**********************************************Début du header**********************************************/
+
+header {
+  background-color: #ea7367;
+  top: 0;
+  height: 100px;
+  z-index: 20;
+}
+
+
+h1 {
+  margin: 0;
+  padding: 20px;
+}
+
+/******************************* debut menu hamburger***********************************/
+
+
+nav label {
+  display: block;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  position: absolute;
+  top: 75px;
+  right: 20px;
+
+}
+
+nav label i {
+  left: 11px;
+  top: 5px;
+}
+
+.menuphone {
+
+  width: 250px;
+  height: 0;
+  overflow: hidden;
+}
+
+#menu:checked ~ .menuphone {
+
+  height: 400px;
+  background-color: white;
+  font-size: 25px;
+  border: 3px solid #ea7367;
+  position: absolute;
+  right: 0;
+  top : 150px;
+  transition: 1s;
+}
+
+.menuphone a:hover {
+  color: #7ee07d;
+}
+/*******************************************fin du header***************************************/
+/*******************************************Début du main.accueil********************************/
+
+
+
+h2 {
+  padding-top: 20px;
+  margin-bottom: 20px;
+
+}
+
+.accueil {
+  background-color: #F5F5F6;
+  flex-flow: row wrap;
+  /*border-right: 400px solid transparent;
+  border-bottom: 57px solid #ffa495;*/
+
+}
+
+ /*****************************début références************************************/
+
+.accueil section {
+  width: 360px;
+  height: 360px;
+  margin-bottom: 30px;
+
+}
+
+
+
+
+.accueil h3, .accueil ul {
+  font-size: 25px;
+  font-family: 'Patrick Hand', cursive;
+}
+
+.accueil section:hover h3, .accueil section:hover ul {
+  background-color: rgba(255, 164, 149, 0.8);
+
+}
+
+.accueil h3 {
+
+  height: 30%;
+}
+
+.accueil ul {
+  height: 70%;
+}
+
+
+.immo, .boulanger, .architecte, .paysagiste, .bijouterie, .traiteur {
+  background-size: cover;
+}
+
+.immo  {
+
+  background-image: url(../img/references/immo.png);
+}
+
+.boulanger {
+  background-image: url(../img/references/patisserie.png);
+}
+
+.architecte {
+  background-image: url(../img/references/architecte.png);
+}
+
+.paysagiste {
+  background-image: url(../img/references/paysagiste.png);
+}
+
+.bijouterie {
+  background-image: url(../img/references/bijouterie.png);
+}
+
+.traiteur {
+  background-image: url(../img/references/traiteur.png);
+}
+
+
+
+/*************************************main class équipe**************************/
+
+
+.équipe {
+  background-color: #ffa495;
+  flex-flow: row wrap;
+
+  /*border-bottom: 55px solid #ffa495;
+  border-left: 370px solid transparent;*/
+}
+
+.clement:hover h3, .nor:hover h3,.clement:hover p, .nor:hover p {
+  visibility: visible;
+  height: 50%;
+  background-color: rgba(177, 255, 173, 0.8);
+
+}
+
+.clement:hover h3, .nor:hover h3 {
+
+  border-top-left-radius: 125px;
+  border-top-right-radius: 125px;
+
+  /*width: 100%
+  margin: auto;*/
+}
+
+.clement:hover p, .nor:hover p {
+
+  border-bottom-left-radius: 125px;
+  border-bottom-right-radius: 125px;
+
+  /*width: 100%
+  margin: auto;*/
+}
+
+hr, .équipe h3, .équipe p {
+  visibility: hidden;
+}
+
+.clement:hover hr, .nor:hover hr {
+  visibility: visible;
+  border: 1px solid black;
+  width: 248px;
+
+}
+
+.clement, .nor {
+
+  width: 250px;
+  height: 250px;
+  border-radius: 125px;
+  margin: 50px 0;
+  flex-flow: column;
+
+}
+
+.clement {
+  background-image: url(../img/photos/clement2.jpg);
+  background-size: cover;
+}
+
+.nor {
+  background-image: url(../img/photos/nor.jpg);
+  background-size: cover;
+}
+
+/*.produit {
+  border-top: 57px solid #ffa495;
+  border-right: 400px solid transparent
+
+}*/
+
+
+
+
+/*<============================================== main produit======== ================================>*/
+
+.produit {
+   background-color: #F5F5F6;
+   flex-flow: row wrap;
+   height: auto;
+}
+/*<+++++++++++++++++++++ .produit figure +++++++++++++++++++++++++++>*/
+.produit figure {
+ width: 320px;
+ height: 500px;
+}
+
+/*<........................... .produit figure img .....................>*/
+.produit figure img {
+  width: 80%;
+  height: auto;
+  top: 30px;
+}
+
+/*<...................... .produit .package ..................>*/
+.produit .package {
+  background-color: #ffa495;
+  height: 377px;
+  border-radius: 10px;
+}
+
+/*<........................ .produit .package h3 ..................>*/
+.produit .package h3 {
+
+   top: 20px;
+}
+
+.produit .package figcaption {
+  padding: 10px;
+}
+
+/*<......................... .produit .package figca span ....................>*/
+
+.produit .package figcaption span {
+   font-weight: bold;
+   color: #b3443c;
+   margin-top: 20px;
+   top: 20px;
+}
+/*<----------------  .produit .package a ------------------------>*/
+
+.produit .package a {
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
+            -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
+
+}
+
+h3, figcaption, .contact form {
+   font-family: 'Patrick Hand',cursive;
+}
+
+
+/*<============================ main class contact ==========================>*/
+
+.contact {
+   height: auto;
+   background-color: #b1ffad;
+}
+
+.contact h2 {
+  margin: 25px;
+}
+/*<+++++++++++++++++++++++ section main class cotact +++++++++++++++++++++++++++>*/
+
+.contact section {
+   width: 300px;
+   height: auto;
+   background-color: #FFA495;
+   border-radius: 15px;
+   margin-bottom: 20px;
+}
+
+
+.contact section p {
+   margin: 10px;
+}
+
+.contact section i {
+  margin-right: 5px;
+  color: white;
+}
+
+/*<....................... form main class contact ......................>*/
+
+.contact form {
+   width: 300px;
+   height: auto;
+   background-color: #b1ffad;
+}
+
+
+.contact input {
+  margin-bottom: 10px;
+}
+
+
+.contact .projet {
+  height: 90px;
+}
+
+.contact .envoi {
+   width: 50%;
+   margin: 10px auto 30px auto;
+   background-color: #EA7367;
+   border-radius: 5px;
+   padding: 5px;
+   font-size: 20px;
+
+}
+
+
+
+.contact iframe {
+   width: 90%;
+
+}
+
+.bordure {
+  height: 100px;
+  width: 100%;
+  background-image: url(../img/bord1.png);
+  background-size: cover;
+}
+.bordure2 {
+  height: 100px;
+  width: 100%;
+  background-image: url(../img/bord2.png);
+  background-size: cover;
+}
+
+.bordure3 {
+  height: 100px;
+  width: 100%;
+  background-image: url(../img/bord3.png);
+  background-size: cover;
+}
+
+
+
+
+/*<============================= footer =============================>*/
+
+footer {
+   height: 50px;
+   background-color: #b3444c;
+
+   bottom: 0;
+
+}
+
+footer ul {
+  height: 100%;
+  flex-flow: row nowrap;
+}
+
+footer li {
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   font-size: 20px;
+
+}
+
+
+footer li i {
+
+   top: 3px;
+   left: 7px;
+
+}
+
+
+/*****************************************************************tablette*************************************/
+@media (min-width : 600px) {
+
+  h1 {
+    text-align: center;
+
+
+  }
+
+  h1 span, .fixe {
     display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
+  }
 
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-    vertical-align: middle;
-}
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-    resize: vertical;
-}
-
-/* ==========================================================================
-   Browser Upgrade Prompt
-   ========================================================================== */
-
-.browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden {
-    display: none !important;
-}
-
-/*
- * Hide only visually, but have it available for screen readers:
- * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- */
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-/*
- * Extends the .visuallyhidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
+  header {
     height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
+  }
+
+
+
+
+  .fixe {
+    position: sticky;
+    top : 0;
+    background-color: #EA7367;
+    height: 50px;
+    z-index: 20;
+
+  }
+
+  .fixe ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
+
+  }
+
+  .fixe ul a:hover {
+    color: #7EE07D;
+  }
+
+  header {
+    position: relative;
+  }
+
+  .menuphone, nav label{
+    display: none;
+  }
+
+  .accueil, .produit {
+    background-image: url(../img/background/bois.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .accueil section {
+    width: 300px;
+    height: 300px;
+  }
+
+  #products figure {
+    width: 300px;
+  }
+
+
+.bordure, .bordure2 {
+    height: 203px;
+  }
+
+.bordure3 {
+  height: 157px;
 }
 
-/*
- * Hide visually and from screen readers, but maintain layout
- */
 
-.invisible {
-    visibility: hidden;
+
 }
 
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
+@media (min-width : 1000px) {
 
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+header, #contactus {
+  display: flex;
 }
 
-.clearfix:after {
-    clear: both;
+.fixe {
+  height: 70px;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+.fixe ul {
+  font-size: 30px;
 }
 
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
+  header {
+    height: 570px;
+
+  }
+
+  h1 {
+    font-size: 85px;
+    margin: auto;
+  }
+
+  .accueil section {
+    width: 350px;
+    height: 350px;
+  }
+
+  #products figure {
+
+    margin-bottom: 100px;}
+
+
+#contactus {
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  height: 900px;
+  position: relative;
+
 }
 
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   http://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
+#carte {
+  width: 40%;
+  height: 612px;
+}
 
-@media print {
-    *,
-    *:before,
-    *:after,
-    *:first-letter,
-    *:first-line {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster:
-                                   http://www.sanbeiji.com/archives/953 */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
+#contactus h2 {
+  position: absolute;
+  top : 0;
+t
+}
 
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
+.bordure3 {
+  height: 203px;
+}
 
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
 
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
-
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
-
-    thead {
-        display: table-header-group;
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
 }
